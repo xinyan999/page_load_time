@@ -13,7 +13,7 @@ async def measure_page_load_time(url: str, refresh_times: int):
         page = await context.new_page()
         # Pre-launch the browser instance
         print('Initializing the browser...')
-        await page.goto("https://www.google.com/", wait_until='networkidle') 
+        await page.goto(url, wait_until='networkidle') 
         # Warm-up page load: 
         # The first time the browser is launched
         # it usually takes longer due to the time required for initializing the browser instance
