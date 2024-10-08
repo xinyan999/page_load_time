@@ -2,3 +2,5 @@
 pip install playwright
 
 playwright install
+
+pip install openpyxl
