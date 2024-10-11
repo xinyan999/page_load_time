@@ -13,6 +13,7 @@ def tcp_ping(ip, port):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(5)
         s.connect((ip, port))
+        s.shutdown(socket.SHUT_RD)
         
         if s.getsockopt(socket.SOL_SOCKET, socket.SO_ERROR) == 0:
             end_time = time.perf_counter()
